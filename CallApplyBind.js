@@ -16,3 +16,5 @@ greet.call(user1,'welcome','🔥')
 greet.apply(user1,['welcome','🔥'])
 
 ////bind
+const binding=greet.bind(user1)
+binding('welcome','✅')
