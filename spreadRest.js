@@ -8,3 +8,10 @@ const objname={name:'razi'}
 const objage={age:19}
 const fullUser={...objname,...objage}
 console.log(fullUser)
+
+/////////rest
+
+function sumAll(...nums){
+   return  nums.reduce((a,b)=>a+b,0)
+}
+console.log(sumAll(1,2,3,4))
