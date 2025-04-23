@@ -1,17 +1,17 @@
-const car={
-    brand:'toyota',
-    model:2020
+const car = {
+    brand: 'toyota',
+    model: 2020
 }
 Object.freeze(car)
-car.brand='not changable'
+car.brand = 'not changable'
 
-const carseal={
-    brand:'toyota',
-    model:2021
+const carseal = {
+    brand: 'toyota',
+    model: 2021
 }
 Object.seal(carseal)
 
-carseal.brand ='changable'
+carseal.brand = 'changable'
 
 
 console.log(carseal.brand)
