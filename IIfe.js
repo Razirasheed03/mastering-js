@@ -1,3 +1,3 @@
-(function razi(){
+(function razi() {
     console.log('immedietely prints')
 })()
