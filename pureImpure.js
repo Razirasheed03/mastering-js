@@ -1,14 +1,14 @@
 ///pure function
 
-function add(a,b){
-    return a+b
+function add(a, b) {
+    return a + b
 }
 
 ///impure function has sideeffects
 
-let x=15;
-function add(a){
-    x=x+a
+let x = 15;
+function add(a) {
+    x = x + a
     return x
 }
 
