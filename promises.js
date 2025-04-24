@@ -10,11 +10,15 @@ let myPromise = new Promise((resolve, reject) => {
 })
 // myPromise.then((res)=>console.log(res))
 
-////promise.all
-let promise1 = new Promise((resolve) => setTimeout(resolve, 2000, 'first'))
-let promise2 = new Promise((resolve) => setTimeout(resolve, 3000, 'second'))
+let p1=new Promise((resolve)=>{
+    setTimeout(()=>{
+        resolve('first')
+    },1000)
+})
+let p2=new Promise((resolve)=>{
+    setTimeout(()=>{
+        resolve('second')
+    },2000)
+})
 
-promise1.then((res) => console.log(res))
-// Promise.all([promise1, promise2])
-//   .then((results) => console.log(results)) // ["First", "Second"]
-//   .catch((error) => console.log(error));
+Promise.all([p1,p2]).then((results)=>console.log(results))
