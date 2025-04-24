@@ -21,4 +21,6 @@ let p2=new Promise((resolve)=>{
     },2000)
 })
 
-Promise.all([p1,p2]).then((results)=>console.log(results))
+// Promise.all([p1,p2]).then((results)=>console.log(results)) ////////////both should be resolve
+
+Promise.race([p1,p2]).then((results)=>console.log(results)) /////////first one wins
