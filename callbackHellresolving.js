@@ -10,11 +10,11 @@ function second(callback){
         callback()
     },2000)
 }
-first(()=>{
-    second(()=>{
-        console.log('task completed')
-    })
-})
+// first(()=>{
+//     second(()=>{
+//         console.log('task completed')
+//     })
+// })
 
 /////////call back hell formed ⬆️ 
 
@@ -37,6 +37,16 @@ function second(){
     })
 }
 
-first()
-.then(()=>second())
-.then(()=>console.log('task completed'))
+// first()
+// .then(()=>second())
+// .then(()=>console.log('task completed'))
+
+
+
+////////call back hell solving using async await (more optimized ) ⬇️
+
+const runAsync=async()=>{
+    await first();
+    await second();
+    console.log('task complete')
+}
