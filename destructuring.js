@@ -8,4 +8,4 @@ console.log(a,b,c)
 
 let obj={name:'razi',age:19}
 const {name,age}=obj
-console.log(name)
+console.log(name) 
