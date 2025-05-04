@@ -1,19 +1,38 @@
+// const user1={
+//     name:'razi'
+// }
+// const user2={
+//     name:'nadeem'
+// }
+// function greet(greeting,emoji){
+//     console.log(`${greeting} ${this.name}, ${emoji}`)
+// }
+
+// ///call
+// greet.call(user2,'welcome','🤝')
+
+// ///apply
+// greet.apply(user1,['welcome','🤝'])
+
+// ///bind
+// const binding=greet.bind(user2)
+// binding('welcome','🤝')
+
+
+
 const user1={
-    name:'razi'
+ name:'nadeem'   
 }
 const user2={
-    name:'nadeem'
-}
-function greet(greeting,emoji){
-    console.log(`${greeting} ${this.name}, ${emoji}`)
+    name:'razi'
 }
 
-///call
-greet.call(user2,'welcome','🤝')
+function borrow(geeting){
+    console.log(`${geeting},${this.name}`)
+}
 
-///apply
-greet.apply(user1,['welcome','🤝'])
+// borrow.call(user2,'welcome')
+// borrow.apply(user2,['heelomonu'])
+// const binding=borrow.bind(user1)
+// binding('helloo')
 
-///bind
-const binding=greet.bind(user2)
-binding('welcome','🤝')
