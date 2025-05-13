@@ -50,3 +50,8 @@ const runAsync=async()=>{
     await second();
     console.log('task complete')
 }
+
+
+const s1=new Promise((res,rej)=>{
+    resolve('hii from here')
+})
