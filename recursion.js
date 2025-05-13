@@ -18,9 +18,10 @@ function sum(n) {
 }
 // console.log(sum(5))
 
-/////////// reverse a string /////////
-function revStr(str){
-    if(str==='') return '';
-    return revStr(str.slice(1))+str[0]
+/////////// reverse a string  /////////
+
+function revStr(str) {
+    if (str === '') return '';
+    return revStr(str.slice(1)) + str[0]
 }
 console.log(revStr('razi'))
