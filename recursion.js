@@ -1,4 +1,4 @@
-
+/////////// print btween start to end ////////////
 function printNum(start, end) {
     if (start > end) return
     console.log(start)
@@ -6,11 +6,11 @@ function printNum(start, end) {
 }
 // printNum(1, 10)
 
-///// sum of positive numbers 
+
+/////////   sum of positive numbers  //////////
 function sum(n) {
     if (n == 0) return 0
     if (n > 0) {
-
         return n + sum(n - 1)
     } else {
         return 'invalid'
