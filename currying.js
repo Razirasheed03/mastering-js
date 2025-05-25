@@ -7,10 +7,10 @@
 // }
 // console.log(add(1)(2)(3))
 
-function greet(name){
-    return function(){
-        console.log('hello',name)
+function greet(name) {
+    return function () {
+        console.log('hello', name)
     }
 }
-const gr=new greet('name')
+const gr = new greet('name')
 gr()
