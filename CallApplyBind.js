@@ -20,14 +20,14 @@
 
 
 
-const user1={
- name:'nadeem'   
+const user1 = {
+    name: 'nadeem'
 }
-const user2={
-    name:'razi'
+const user2 = {
+    name: 'razi'
 }
 
-function borrow(geeting){
+function borrow(geeting) {
     console.log(`${geeting},${this.name}`)
 }
 
