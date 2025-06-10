@@ -1,4 +1,5 @@
-const user={name:'razi'}
+const user = { name: 'razi' }
 
-console.log(user.hasOwnProperty('name'))
-console.log(user.hasOwnProperty('age'))
+console.log(user.hasOwnProperty('name')) ////true
+
+console.log(user.hasOwnProperty('age')) ////false
