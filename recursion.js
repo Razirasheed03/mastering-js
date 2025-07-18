@@ -48,3 +48,17 @@ function revArr(arr){
     return [arr[arr.length-1]].concat(revArr(arr.slice(0,-1)))
 }
 console.log(revArr([1,2,3,4,5]))
+
+/////// flatting array /////////////
+function flattenArr(arr){
+    let result=[]
+    for(let val of arr){
+        if(Array.isArray(val)){
+            result=result.concat(flattenArr(val))
+        }else{
+            result.push(val)
+        }
+    }
+    return result
+}
+console.log(flattenArr([1,2,3,[4,5,6,[7,8]]]))
