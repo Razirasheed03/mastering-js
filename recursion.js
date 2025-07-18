@@ -39,3 +39,12 @@ function revStr(str) {
     return revStr(str.slice(1)) + str[0]
 }
 console.log(revStr('razi'))
+
+
+///////////// reverse a array //////////
+
+function revArr(arr){
+    if(arr.length===0) return []
+    return [arr[arr.length-1]].concat(revArr(arr.slice(0,-1)))
+}
+console.log(revArr([1,2,3,4,5]))
