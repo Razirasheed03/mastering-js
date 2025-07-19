@@ -1,3 +1,4 @@
+    //// ========== normal method ========= ////////
 function isPalindrome(str) {
     let left = 0;
     let right = str.length - 1;
@@ -10,14 +11,15 @@ function isPalindrome(str) {
     return true;
 }
 
-console.log(isPalindrome("madam"));
-console.log(isPalindrome("razi"));
+console.log(isPalindrome("madam")); ///true
+console.log(isPalindrome("razi"));  ///false
 
+///////========== Using Recursion ============///////////
 
 function PalindromeUsingRec(str) {
     if (str.length <= 1) return true
     if (str[0] !== str[str.length - 1]) return false
     return PalindromeUsingRec(str.slice(1, -1))
 }
-console.log(PalindromeUsingRec("madam"))
-console.log(PalindromeUsingRec("razi"))
+console.log(PalindromeUsingRec("madam"))    //true
+console.log(PalindromeUsingRec("razi"))     //false
