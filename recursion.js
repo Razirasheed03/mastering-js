@@ -1,12 +1,12 @@
 ////////print a countdown//////////
 
 function countdown(n) {
-  if (n <= 0) {
-    console.log("Done!");
-    return;
-  }
-  console.log(n);
-  countdown(n - 1);
+    if (n <= 0) {
+        console.log("Done!");
+        return;
+    }
+    console.log(n);
+    countdown(n - 1);
 }
 
 countdown(5);
@@ -43,22 +43,32 @@ console.log(revStr('razi'))
 
 ///////////// reverse a array //////////
 
-function revArr(arr){
-    if(arr.length===0) return []
-    return [arr[arr.length-1]].concat(revArr(arr.slice(0,-1)))
+function revArr(arr) {
+    if (arr.length === 0) return []
+    return [arr[arr.length - 1]].concat(revArr(arr.slice(0, -1)))
 }
-console.log(revArr([1,2,3,4,5]))
+console.log(revArr([1, 2, 3, 4, 5]))
 
 /////// flatting array /////////////
-function flattenArr(arr){
-    let result=[]
-    for(let val of arr){
-        if(Array.isArray(val)){
-            result=result.concat(flattenArr(val))
-        }else{
+function flattenArr(arr) {
+    let result = []
+    for (let val of arr) {
+        if (Array.isArray(val)) {
+            result = result.concat(flattenArr(val))
+        } else {
             result.push(val)
         }
     }
     return result
 }
-console.log(flattenArr([1,2,3,[4,5,6,[7,8]]]))
+console.log(flattenArr([1, 2, 3, [4, 5, 6, [7, 8]]]))
+
+
+///// find Palindrom ////////////
+
+function FindPalindrome(str) {
+    if (str.length <= 1) return true
+    if (str[0] !== str[str.length - 1]) return false
+    return FindPalindrome(str.slice(1, -1))
+}
+console.log(FindPalindrome("razi"))
