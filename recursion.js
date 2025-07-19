@@ -72,3 +72,12 @@ function FindPalindrome(str) {
     return FindPalindrome(str.slice(1, -1))
 }
 console.log(FindPalindrome("razi"))
+
+
+//////// sum of Array using recursion //////////
+
+function FindSumOfArray(arr,i=0){
+    if(i>=arr.length) return 0
+    return arr[i]+FindSumOfArray(arr, i+1)
+}
+console.log(FindSumOfArray([1,2,3,4,5]))
