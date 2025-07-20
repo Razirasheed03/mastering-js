@@ -81,3 +81,16 @@ function FindSumOfArray(arr,i=0){
     return arr[i]+FindSumOfArray(arr, i+1)
 }
 console.log(FindSumOfArray([1,2,3,4,5]))
+
+
+
+////// find max element in array using recursion ///////////
+
+function FindMax(arr,i=0,max=-Infinity){
+    if(i>=arr.length) return max
+    if(arr[i]>max){
+        max=arr[i]
+    }
+    return FindMax(arr,i+1,max)
+}
+console.log(FindMax([1,33,22,13,2,4]))
