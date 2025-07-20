@@ -76,21 +76,21 @@ console.log(FindPalindrome("razi"))
 
 //////// sum of Array using recursion //////////
 
-function FindSumOfArray(arr,i=0){
-    if(i>=arr.length) return 0
-    return arr[i]+FindSumOfArray(arr, i+1)
+function FindSumOfArray(arr, i = 0) {
+    if (i >= arr.length) return 0
+    return arr[i] + FindSumOfArray(arr, i + 1)
 }
-console.log(FindSumOfArray([1,2,3,4,5]))
+console.log(FindSumOfArray([1, 2, 3, 4, 5]))
 
 
 
 ////// find max element in array using recursion ///////////
 
-function FindMax(arr,i=0,max=-Infinity){
-    if(i>=arr.length) return max
-    if(arr[i]>max){
-        max=arr[i]
+function FindMax(arr, i = 0, maxElem = -Infinity) {
+    if (i >= arr.length) return maxElem
+    if (arr[i] > maxElem) {
+        maxElem = arr[i]
     }
-    return FindMax(arr,i+1,max)
+    return FindMax(arr, i + 1, maxElem)
 }
-console.log(FindMax([1,33,22,13,2,4]))
+console.log(FindMax([1, 33, 22, 13, 2, 4]))
