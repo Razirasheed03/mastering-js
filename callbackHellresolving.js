@@ -10,11 +10,11 @@ function second(callback) {
         callback()
     }, 2000)
 }
-// first(()=>{
-//     second(()=>{
-//         console.log('task completed')
-//     })
-// })
+first(() => {
+    second(() => {
+        // console.log('task completed')
+    })
+})
 
 /////////call back hell formed ⬆️ 
 
@@ -37,8 +37,8 @@ function second() {
     })
 }
 
-// first()
-// .then(()=>second())
+first()
+    .then(() => second())
 // .then(()=>console.log('task completed'))
 
 

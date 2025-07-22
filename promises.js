@@ -21,11 +21,11 @@ let p2 = new Promise((resolve) => {
     }, 2000)
 })
 
-// Promise.all([p1,p2]).then((results)=>console.log(results)) ////////////both should be resolve
+Promise.all([p1,p2]).then((results)=>console.log(results)) ////////////both should be resolve
 
-// Promise.race([p1,p2]).then((results)=>console.log(results)) /////////first one wins
+Promise.race([p1,p2]).then((results)=>console.log(results)) /////////first one wins
 
-// Promise.any([p1,p2]).then((result)=>console.log(result))      /////first one wins if reject also
+Promise.any([p1,p2]).then((result)=>console.log(result))      /////first one wins if reject also
 
 Promise.allSettled([p1, p2]).then((result) => console.log(result))    ///////show status of each
 
