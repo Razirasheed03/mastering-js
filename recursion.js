@@ -13,15 +13,18 @@ countdown(5);
 
 
 /////////// print btween start to end ////////////
+
 function printNum(start, end) {
     if (start > end) return
     console.log(start)
     printNum(start + 1, end)
 }
-// printNum(1, 10)
+
+printNum(1, 10)
 
 
 /////////   sum of positive numbers  //////////
+
 function sum(n) {
     if (n == 0) return 0
     if (n > 0) {
@@ -30,7 +33,8 @@ function sum(n) {
         return 'invalid'
     }
 }
-// console.log(sum(5))
+
+console.log(sum(5))
 
 /////////// reverse a string  /////////
 
@@ -38,6 +42,7 @@ function revStr(str) {
     if (str === '') return '';
     return revStr(str.slice(1)) + str[0]
 }
+
 console.log(revStr('razi'))
 
 
@@ -47,6 +52,7 @@ function revArr(arr) {
     if (arr.length === 0) return []
     return [arr[arr.length - 1]].concat(revArr(arr.slice(0, -1)))
 }
+
 console.log(revArr([1, 2, 3, 4, 5]))
 
 /////// flatting array /////////////
@@ -61,6 +67,7 @@ function flattenArr(arr) {
     }
     return result
 }
+
 console.log(flattenArr([1, 2, 3, [4, 5, 6, [7, 8]]]))
 
 
@@ -71,6 +78,7 @@ function FindPalindrome(str) {
     if (str[0] !== str[str.length - 1]) return false
     return FindPalindrome(str.slice(1, -1))
 }
+
 console.log(FindPalindrome("razi"))
 
 
@@ -80,6 +88,7 @@ function FindSumOfArray(arr, i = 0) {
     if (i >= arr.length) return 0
     return arr[i] + FindSumOfArray(arr, i + 1)
 }
+
 console.log(FindSumOfArray([1, 2, 3, 4, 5]))
 
 
@@ -93,4 +102,5 @@ function FindMax(arr, i = 0, maxElem = -Infinity) {
     }
     return FindMax(arr, i + 1, maxElem)
 }
+
 console.log(FindMax([1, 33, 22, 13, 2, 4]))
